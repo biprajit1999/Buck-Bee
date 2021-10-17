@@ -66,8 +66,8 @@
 
 .img_prof img
 {
-    height: 70px;
-    width: 70px;
+    height: 83px;
+    width: 83px;
     position: relative;
     display: table;
     /* top: 7px;  */
@@ -78,6 +78,10 @@
     align:left;
 }
 
+.left_msg button
+{
+  height: 90px;
+}
 .img_prof2 img
 {
     height: 70px;
@@ -156,7 +160,7 @@
   
   .row1 {
     /* flex: 2%; */
-    padding: 15px;
+    padding: 10px;
     padding-top: 1px;
   }
 
@@ -172,7 +176,7 @@
 .row2 {
     /* float: left; */
     width: 60%;
-    padding: 15px;
+    padding: 3px;
   }
 
   .column1::after {
@@ -188,7 +192,7 @@
   .row2 {
     /* flex: 2%; */
     padding: 30px;
-    padding-top: 20px;
+    padding-top: 12px;
   }
 
 .msg2
