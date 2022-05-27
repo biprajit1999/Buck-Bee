@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{padding: 0;margin: 0;box-sizing: border-box ;font-family: 'Nunito', sans-serif;}
+body{
+    background-color: #ffe99f;
+}
+
+
+.header{
+    width: 100%;
+    
+    position: fixed;
+    height: 54px;
+    top: 0;
+    background-color: rgb(48, 48, 48); 
+    box-shadow: 0px 1px 5px rgb(100, 100, 100);
+    justify-content: space-evenly;
+    display: flex;
+    z-index: 13;
+}
+.header_left img{
+    height: 50px;
+    margin: 3px;
+    margin-right: 100px;
+    
+}
+.header_left{
+    display: flex;
+}
+.header_right ul{
+    display: flex;
+    list-style: none;
+}
+.main_page{
+    width: 100%;
+    height: fit-content;
+}
+.header_search{
+    margin: 10px 0px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    height: 34px;
+    background-color: white;
+}
+.header_search input{
+    outline: none;
+    border: none;
+    width: 220px;
+    background: none;
+}
+.header_right ul li i{
+    margin-top: 10px;
+    padding: 0px 20px;
+    align-items: center;
+    padding-top: 5px;
+    flex-direction: column;
+    margin-right: 40px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.header_right ul li i:hover{
+    color: rgb(255, 217, 0);
+    border-radius: 10px;
+    padding-top: 5px;
+    transform: scale(1.5);
+}
+.header_right ul li i{
+    font-size: 25px;
+}
+.header_right .menu-btn i{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display:none;
+}
+@media (max-width: 940px){
+    .header_right .menu-btn i{
+        display: block;
+        color: white;
+        margin-top: 15px;
+    }
+    #click:checked ~ ul{
+        right: 0%;
+    }
+    #click:checked ~ .menu-btn i:before{
+        content:"\f00d";
+    }
+    .rightsection{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    
+    .header_right ul{
+        position: fixed;
+        top: 55px;
+        right: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        align-items: center;
+        text-align: center;
+        transition: 0.5s ease;
+    }
+    .header_right ul li i{
+        margin: 30px 0;
+        font-size: 30px;
+    }
+    .header_right ul li i:hover{
+        color: cyan;
+        background-color: gray;
+    }  
+}
+
+
+/* ------------------------------------------------------------------ */
+
+.whole{
+    display: flex;
+    margin-top: 50px;
+}
+.profile{
+    width: 44vh;
+    height: 50vh;
+    border-top: 40px solid rgb(255, 207, 51);
+    margin-left: 50px;
+    box-shadow: 5px 5px 10px #4b4b4b60 ;
+    background-color: white;
+    border-radius: 10%;
+    margin-top: 80px;
+    justify-content: center;
+    text-align: center;
+}
+.profile i{
+    font-size: 35px;
+    margin: 10px 0;
+}
+.profile_content{
+    text-align: center;
+}
+.profile_content h3{
+    margin: 10px;
+    padding: 5px;  
+}
+
+.badges{
+    display: flex;
+    margin-top: -13px;
+    margin-left: 100px;
+}
+.firsticon i{
+    color: gold;
+}
+.secondicon i{
+    color: orange;
+}
+.profile h3:hover{
+    background-color: whitesmoke;
+    padding: 5px;
+}
+/* .profile_content{
+    margin: 20px 30px;
+} */
+.allcard{
+    margin-top: 80px;
+    margin-left: 150px;
+    /* background-color: white; */
+}
+.uppercards{
+    display: flex;
+    /* background-color: white; */
+}
+.lowercards{
+    display: flex;
+    /* background-color: white; */
+}
+.badges{
+    display: flex;
+    margin-top: -13px;
+    margin-left: 100px;
+}
+.picture{
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.card img{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    margin-top: 30px; 
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.card h2{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+}
+.card{
+    transition: transform 0.5s ; 
+    background-color: rgb(253, 253, 253);
+    border:1px solid rgb(156, 156, 156);
+    border-radius: 10%;
+    width: 40vh;
+    height: 40vh;
+}
+.card:hover{
+    z-index: 1;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px #4b4b4b60;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 20px;
+}
+.businessimage img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 28%;
+    height: 67%;
+}
+
+@media (max-width:769px){
+    .profile{
+        width:20vh;
+        height:40vh;
+    }
+    .businessimage{
+        display: none;
+    }
+    .picture{
+        width: 10vh;
+        height: 10vh;
+    }
+    .profile i{
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    .card{
+        width: 40vh;
+        height: 40vh;
+    }
+    .allcard{
+        margin-left: 100px;
+    }
+    .allcard .uppercards{
+        display: inline;
+    }
+    .allcard .lowercards{
+        display: inline;
+    }
+
+    .header_search i{
+        font-size: 20px;
+    }
+    .header_search input{
+        width: 50px;
+    }
+    .header{
+        width: 100%;
+        height: 40px;
+    }
+    .header img{
+        width: auto;
+        height: auto;
+    }
+    .header_search{
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width:375px){
+    .profile{
+        width:60%;
+        height:50vh;
+        margin-left: 100px;
+    }
+    .businessimage{
+        display: none;
+    }
+    .picture{
+        width: 10vh;
+        height: 10vh;
+    }
+    .profile i{
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    .card{
+        
+    }
+    .allcard{
+        width:60%;
+        height:50vh;
+        margin-left: 100px;
+    }
+    .allcard .uppercards{
+        display: inline;
+
+    }
+    .allcard .lowercards{
+        display: inline;
+    }
+    .whole{
+        display: inline;
+    }
+}
+
+@media (max-width:480px){
+    .profile{
+        width:60%;
+        height:50vh;
+        margin-left: 100px;
+    }
+    .businessimage{
+        display: none;
+    }
+    .picture{
+        width: 10vh;
+        height: 10vh;
+    }
+    .profile i{
+        font-size: 30px;
+        margin: 10px 0;
+    }
+   
+    .allcard{
+        width:60%;
+        height:50vh;
+        margin-left: 100px;
+    }
+    .allcard .uppercards{
+        display: inline;
+    }
+    .allcard .lowercards{
+        display: inline;
+    }
+    .whole{
+        display: inline;
+    }
+}
